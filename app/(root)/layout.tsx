@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/NavBar";
-import NameTag from "../components/NameTag";
+import Alert from "../components/Alert";
+import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col lg:h-screen`}>
-        <div className="text-sm text-white bg-violet-500 text-center p-1 font-medium">This project is a Work in progress</div>
+        <div className="text-sm text-white bg-gray-900 text-center p-1 font-medium flex items-center justify-center gap-2">
+          <ExclamationCircleIcon width={20}></ExclamationCircleIcon>This project is a Work
+          in progress
+        </div>
         <NavBar></NavBar>
         <div className="flex-1">{children}</div>
+        <Alert></Alert>
       </body>
     </html>
   );

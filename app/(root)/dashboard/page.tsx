@@ -14,10 +14,8 @@ export default function DashboardHome() {
     setPreviewType(type);
   };
   return (
-    <div className="grid grid-cols-3 gap-3 h-full">
-      <div className="col-span-1 bg-white rounded-lg border shadow-sm p-2">
-        <TheForm></TheForm>
-      </div>
+    <div className="bg-white rounded-lg border shadow-sm p-2">
+      <TheForm></TheForm>
     </div>
   );
 }

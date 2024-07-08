@@ -15,13 +15,15 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
         </div>
         <NavLinks></NavLinks>
         <hr></hr>
-        <button className="mt-5 text-sm bg-violet-500 p-2 text-white rounded-lg shadow-sm">
+        <br></br>
+        <button className="text-sm bg-gray-700 p-2 text-white rounded-lg shadow-sm">
+          Preview
+        </button>
+        <button className="text-sm bg-violet-500 p-2 text-white rounded-lg shadow-sm">
           Publish Portfolio
         </button>
       </div>
-      <div className="lg:col-span-3">
-        {children}
-      </div>
+      <div className="lg:col-span-3">{children}</div>
     </div>
   );
 }
