@@ -25,7 +25,7 @@ export default function Home() {
             name="username"
           ></input>
           <Link
-            href="/signup"
+            href="#"
             className="bg-black text-white px-4 py-2 rounded-lg hover:opacity-80 transition duration-300 text-sm"
           >
             Claim
@@ -35,4 +35,3 @@ export default function Home() {
     </div>
   );
 }
-

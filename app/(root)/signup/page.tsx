@@ -1,4 +1,4 @@
-import { login, signup } from "@/app/lib/actions";
+import { signup } from "@/app/lib/actions";
 import { Field, Input, Label } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
@@ -68,10 +68,10 @@ export default function SignUpPage() {
         </Label>
       </Field>
       <button
-        formAction={login}
+        formAction={signup}
         className="bg-violet-500/50 p-2 text-white text-sm font-semibold rounded-lg mt-3"
       >
-        Create account
+        Create account (Won't work, use test login)
       </button>
       <p className="text-base text-gray-600 mt-3">
         Already have an account?{" "}

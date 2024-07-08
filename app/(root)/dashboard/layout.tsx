@@ -10,7 +10,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           Everything related to your Portfolio
         </p>
         <div className="bg-white p-2 rounded-lg shadow-sm border text-sm text-center flex gap-2 items-center justify-center">
-          <span>DevloperPortfol.io/row-nation</span>{" "}
+          <span>DevloperPortfol.io/test</span>{" "}
           <ClipboardIcon width={16}></ClipboardIcon>
         </div>
         <NavLinks></NavLinks>

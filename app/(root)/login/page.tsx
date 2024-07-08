@@ -1,4 +1,4 @@
-import { login, signup } from "@/app/lib/actions";
+import { login } from "@/app/lib/actions";
 import { Field, Input, Label } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
@@ -15,7 +15,7 @@ export default function LoginPage() {
           type="email"
           required
           name="email"
-          placeholder="name@example.com"
+          placeholder="use test@developerportfol.io for testing"
           className={clsx(
             " block w-full rounded-lg border  py-1.5 px-3 text-sm/6 text-gray-900",
             "focus:outline-purple-500/50 data-[focus]:outline-2 data-[focus]:-outline-offset-2"
@@ -27,7 +27,7 @@ export default function LoginPage() {
           type="password"
           required
           name="password"
-          placeholder="*******"
+          placeholder="password is test123"
           className={clsx(
             " block w-full rounded-lg border  py-1.5 px-3 text-sm/6 text-gray-900",
             "focus:outline-purple-500/50 data-[focus]:outline-2 data-[focus]:-outline-offset-2"
