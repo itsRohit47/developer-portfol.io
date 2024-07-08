@@ -1,0 +1,35 @@
+import { NextResponse, type NextRequest } from "next/server";
+import { updateSession } from "@/app/lib/utils/supabase/middleware";
+
+export async function middleware(request: NextRequest) {
+  // List of routes that do not require authentication
+  const publicPaths = ["/", "/login", "/signup", "/tos", "/privacy-policy"]; // Add any other public paths here
+
+  // Check if the current request path is public
+  if (publicPaths.includes(request.nextUrl.pathname)) {
+    return NextResponse.next();
+  }
+
+  // Proceed with session update and authentication check
+  const response = await updateSession(request);
+
+  // If the user is not authenticated, redirect to login page
+  if (!response) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
+
+  return response;
+}
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * Feel free to modify this pattern to include more paths.
+     */
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+  ],
+};
