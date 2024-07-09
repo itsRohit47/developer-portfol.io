@@ -25,7 +25,7 @@ export default async function NavBar() {
               {user.email}
             </div>
             <Link href="/dashboard">Dashboard</Link>
-            <button className="">Sign out</button>
+            <button className="">Sign out now</button>
           </form>
         ) : (
           <Link
